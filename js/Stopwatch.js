@@ -34,7 +34,7 @@ class Stopwatch {
         s = this.makeTimeFormat(this.s);
         m = this.makeTimeFormat(this.m);
         h = this.makeTimeFormat(this.h);
-        let text=`${h}` + ':' + `${m}` + ':' + `${s}` + '.' + `${ms}`;
+        let text = `${h}` + ':' + `${m}` + ':' + `${s}` + '.' + `${ms}`;
         this.jQueryElement.text(text);
         return text;
     }

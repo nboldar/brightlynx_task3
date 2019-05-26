@@ -11,7 +11,13 @@ let defaultSettings = {
         "black", "gray", "silver", "fuchsia",
         "purple", "red", "maroon", "yellow",
         "olive", "lime", "green", "aqua",
-        "teal", "blue", "navy",
+        "teal", "blue", "navy", "RosyBrown",
+        "SandyBrown", "Goldenrod", "DarkGoldenRod", "Peru",
+        "Chocolate", "SaddleBrown", "Sienna", "Brown",
+        "MediumOrchid", "MediumPurple", "BlueViolet", "DarkViolet",
+        "DarkOrchid", "DarkMagenta", "Purple", "Indigo",
+        "SlateBlue", "DarkSlateBlue",
+
     ],
     /**
      * ширина/высота игрового поля
@@ -97,7 +103,7 @@ class Game {
             let position = this.getPosition(element);
             let color = this.findCellColor(position);
             element.css("background-color", color);
-            if (this.firstPickedElement === null) {
+            if (this.firstPickedElement === null || this.firstPickedElement.get(0) === $(event.target).get(0)) {
                 this.firstPickedElement = $(event.target);
             } else {
                 this.secondPickedElement = $(event.target);
@@ -140,6 +146,11 @@ class Game {
      * @returns {boolean}
      */
     isGuessed() {
+        console.log(this.firstPickedElement);
+        console.log(this.secondPickedElement);
+        if (this.firstPickedElement === this.secondPickedElement) {
+            return false;
+        }
 
         return this.firstPickedElement.css('background-color') === this.secondPickedElement.css('background-color');
     }
