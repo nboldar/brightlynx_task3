@@ -1,0 +1,30 @@
+{
+  "name": "find_pair",
+  "version": "1.0.0",
+  "description": "good game",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nboldar/brightlynx_task3.git"
+  },
+  "keywords": [
+    "js",
+    "nodejs",
+    "koa2"
+  ],
+  "author": "Nikolay Boldar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nboldar/brightlynx_task3/issues"
+  },
+  "homepage": "https://github.com/nboldar/brightlynx_task3#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0"
+  }
+}
